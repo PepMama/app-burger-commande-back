@@ -1,0 +1,11 @@
+{
+  "name": "app-burger-commande-back",
+  "version": "1.0.0",
+  "description": "Backend de l'application de commande de burger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
