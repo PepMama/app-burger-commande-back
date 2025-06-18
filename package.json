@@ -9,6 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PepMama/app-burger-commande-back.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PepMama/app-burger-commande-back/issues"
+  },
+  "homepage": "https://github.com/PepMama/app-burger-commande-back#readme"
 }
