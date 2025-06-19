@@ -79,6 +79,13 @@ app.get('/burgers', (req, res) => {
   ])
 })
 
+app.post('/commandes', (req, res) => {
+  const { name, email, address, items, total } = req.body
+  console.log('Nouvelle commande reçue :', { name, email, address, items, total })
+
+  res.status(201).json({ message: 'Commande confirmée !' })
+})
+
 // Lancer le serveur
 app.listen(3000, () => {
   console.log('API en écoute sur http://localhost:3000')
