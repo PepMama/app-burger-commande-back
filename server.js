@@ -21,11 +21,11 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Carn',
       ingredients: [
-        { name: 'Steak', spicy: false, quantity: 1 },
-        { name: 'Fromage', spicy: false, quantity: 1 },
-        { name: 'Salade', spicy: false, quantity: 1 },
-        { name: 'Tomate', spicy: false, quantity: 1 },
-        { name: 'Sauce spéciale', spicy: false, quantity: 1 }
+        { name: 'Steak',   quantity: 1 },
+        { name: 'Fromage',   quantity: 1 },
+        { name: 'Salade',   quantity: 1 },
+        { name: 'Tomate',   quantity: 1 },
+        { name: 'Sauce spéciale',   quantity: 1 }
       ]
     }
 
@@ -39,10 +39,10 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Carn',
       ingredients: [
-        { name: 'Steak', spicy: false, quantity: 1 },
+        { name: 'Steak',   quantity: 1 },
         { name: 'Bacon', spicy: true, quantity: 1 },
-        { name: 'Fromage', spicy: false, quantity: 1 },
-        { name: 'Oignons', spicy: false, quantity: 1 },
+        { name: 'Fromage',   quantity: 1 },
+        { name: 'Oignons',   quantity: 1 },
         { name: 'Sauce barbecue', spicy: true, quantity: 1 }
       ]
     }
@@ -56,11 +56,11 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Vegan',
       ingredients: [
-        { name: 'Galette de légumes', vegan: true, quantity: 1 },
-        { name: 'Avocat', vegan: true, quantity: 1 },
-        { name: 'Salade', vegan: true, quantity: 1 },
-        { name: 'Tomate', vegan: true, quantity: 1 },
-        { name: 'Sauce vegan', vegan: true, quantity: 1 }
+        { name: 'Galette de légumes',   quantity: 1 },
+        { name: 'Avocat',   quantity: 1 },
+        { name: 'Salade',   quantity: 1 },
+        { name: 'Tomate',   quantity: 1 },
+        { name: 'Sauce vegan',   quantity: 1 }
       ]
     }
   },
@@ -74,8 +74,8 @@ app.get('/burgers', (req, res) => {
       type: 'Carn',
       ingredients: [
         { name: 'Poulet épicé', spicy: true, quantity: 1 },
-        { name: 'Fromage', spicy: false, quantity: 1 },
-        { name: 'Salade', spicy: false, quantity: 1 },
+        { name: 'Fromage',   quantity: 1 },
+        { name: 'Salade',   quantity: 1 },
         { name: 'Sauce piquante', spicy: true, quantity: 1 }
       ]
     }
@@ -89,11 +89,11 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Carn',
       ingredients: [
-        { name: 'Steak', spicy: false, quantity: 2 },
-        { name: 'Fromage', spicy: false, quantity: 2 },
-        { name: 'Salade', spicy: false, quantity: 1 },
-        { name: 'Tomate', spicy: false, quantity: 1 },
-        { name: 'Sauce spéciale', spicy: false, quantity: 1 }
+        { name: 'Steak',   quantity: 2 },
+        { name: 'Fromage',   quantity: 2 },
+        { name: 'Salade',   quantity: 1 },
+        { name: 'Tomate',   quantity: 1 },
+        { name: 'Sauce spéciale',   quantity: 1 }
       ]
     }
   },
@@ -106,11 +106,11 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Carn',
       ingredients: [
-        { name: 'Steak', spicy: false, quantity: 1 },
-        { name: 'Champignons sautés', spicy: false, quantity: 1 },
-        { name: 'Fromage suisse', spicy: false, quantity: 1 },
-        { name: 'Oignons', spicy: false, quantity: 1 },
-        { name: 'Sauce moutarde', spicy: false, quantity: 1 }
+        { name: 'Steak',   quantity: 1 },
+        { name: 'Champignons sautés',   quantity: 1 },
+        { name: 'Fromage suisse',   quantity: 1 },
+        { name: 'Oignons',   quantity: 1 },
+        { name: 'Sauce moutarde',   quantity: 1 }
       ]
     }
   },
@@ -123,10 +123,10 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Carn',
       ingredients: [
-        { name: 'Porc effiloché', spicy: false, quantity: 1 },
-        { name: 'Sauce barbecue', spicy: false, quantity: 1 },
-        { name: 'Coleslaw', spicy: false, quantity: 1 },
-        { name: 'Oignons', spicy: false, quantity: 1 }
+        { name: 'Porc effiloché',   quantity: 1 },
+        { name: 'Sauce barbecue',   quantity: 1 },
+        { name: 'Coleslaw',   quantity: 1 },
+        { name: 'Oignons',   quantity: 1 }
       ]
     }
   },
@@ -139,10 +139,10 @@ app.get('/burgers', (req, res) => {
     composition: {
       type: 'Fish',
       ingredients: [
-        { name: 'Filet de poisson pané', spicy: false, quantity: 1 },
-        { name: 'Salade', spicy: false, quantity: 1 },
-        { name: 'Tomate', spicy: false, quantity: 1 },
-        { name: 'Sauce tartare', spicy: false, quantity: 1 }
+        { name: 'Filet de poisson pané',   quantity: 1 },
+        { name: 'Salade',   quantity: 1 },
+        { name: 'Tomate',   quantity: 1 },
+        { name: 'Sauce tartare',   quantity: 1 }
       ]
     }
   }
