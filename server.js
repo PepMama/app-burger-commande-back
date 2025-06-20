@@ -163,7 +163,7 @@ let commandes = [
   }
 ]
 
-app.post('/commandes/:user', (req, res) => {
+app.post('/commandes/new/:user', (req, res) => {
   const { user } = req.params
   const dateTime = new Date().toLocaleString('fr-FR', {
     timeZone: 'Europe/Paris'
