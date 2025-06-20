@@ -156,6 +156,37 @@ app.post('/commandes', (req, res) => {
   res.status(201).json({ message: 'Commande confirmée !' })
 })
 
+let login = {
+  alice: '1234',
+  bob: '5678',
+  charlie: 'password'
+}
+
+app.get('/login/:id/:password', (req, res) => {
+  const { id, password } = req.params
+
+  if (login[id] && login[id] === password) {
+    res.json({ success: true })
+  } else {
+    res.json({ success: false })
+  }
+})
+
+//register
+
+app.post('/register', (req, res) => {
+  const { id, password } = req.body
+
+  if (login[id]) {
+    res.status(400).json({ message: 'Identifiant déjà pris' })
+  } else {
+    login[id] = password
+    console.log('login', login)
+    res.status(201).json({ message: 'Inscription réussie' })
+  }
+
+})
+
 // Lancer le serveur
 app.listen(3000, () => {
   console.log('API en écoute sur http://localhost:3000')
