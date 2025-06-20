@@ -149,12 +149,41 @@ app.get('/burgers', (req, res) => {
   ])
 })
 
-app.post('/commandes', (req, res) => {
-  const { name, email, address, items, total } = req.body
-  console.log('Nouvelle commande reçue :', { name, email, address, items, total })
+let commandes = [
+  {
+    user: 'alice',
+    email: 'alice@example.com',
+    address: '123 Rue de Paris',
+    items: [
+      { id: 1, name: 'Classic Burger', quantity: 2 },
+      { id: 2, name: 'Bacon Burger', quantity: 1 }
+    ],
+    dateTime: '10/10/2023, 12:00:00',
+    total: 22.0
+  }
+]
 
+app.post('/commandes/:user', (req, res) => {
+  const { user } = req.params
+  const dateTime = new Date().toLocaleString('fr-FR', {
+    timeZone: 'Europe/Paris'
+  })
+  const { email, address, items, total } = req.body
+  console.log('Nouvelle commande reçue :', { user, email, address, items, total, dateTime })
+
+  commandes.push({ user, email, address, items, total, dateTime })
   res.status(201).json({ message: 'Commande confirmée !' })
 })
+
+//get user commandes
+
+app.get('/commandes/:user', (req, res) => {
+  const { user } = req.params
+  const userCommandes = commandes.filter(c => c.user === user)
+  res.json(userCommandes)
+})
+
+// Login
 
 let login = {
   alice: '1234',
