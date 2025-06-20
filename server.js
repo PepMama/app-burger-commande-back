@@ -18,7 +18,17 @@ app.get('/burgers', (req, res) => {
     description: 'Délicieux cheeseburger classique',
     price: 5.5,
     image: 'BurgerClassique.png',
-    composition: 'Steak, fromage, salade, tomate, sauce spéciale'
+    composition: {
+      type: 'Carn',
+      ingredients: [
+        { name: 'Steak', spicy: false, quantity: 1 },
+        { name: 'Fromage', spicy: false, quantity: 1 },
+        { name: 'Salade', spicy: false, quantity: 1 },
+        { name: 'Tomate', spicy: false, quantity: 1 },
+        { name: 'Sauce spéciale', spicy: false, quantity: 1 }
+      ]
+    }
+
   },
   {
     id: 2,
@@ -26,7 +36,16 @@ app.get('/burgers', (req, res) => {
     description: 'Savoureux burger avec du bacon croustillant',
     price: 6.0,
     image: 'BurgerClassique.png',
-    composition: 'Steak, bacon, fromage, oignons, sauce barbecue'
+    composition: {
+      type: 'Carn',
+      ingredients: [
+        { name: 'Steak', spicy: false, quantity: 1 },
+        { name: 'Bacon', spicy: true, quantity: 1 },
+        { name: 'Fromage', spicy: false, quantity: 1 },
+        { name: 'Oignons', spicy: false, quantity: 1 },
+        { name: 'Sauce barbecue', spicy: true, quantity: 1 }
+      ]
+    }
   },
   {
     id: 3,
@@ -34,7 +53,16 @@ app.get('/burgers', (req, res) => {
     description: 'Burger végétalien avec galette de légumes',
     price: 5.0,
     image: 'BurgerClassique.png',
-    composition: 'Galette de légumes, avocat, salade, tomate, sauce vegan'
+    composition: {
+      type: 'Vegan',
+      ingredients: [
+        { name: 'Galette de légumes', vegan: true, quantity: 1 },
+        { name: 'Avocat', vegan: true, quantity: 1 },
+        { name: 'Salade', vegan: true, quantity: 1 },
+        { name: 'Tomate', vegan: true, quantity: 1 },
+        { name: 'Sauce vegan', vegan: true, quantity: 1 }
+      ]
+    }
   },
   {
     id: 4,
@@ -42,7 +70,15 @@ app.get('/burgers', (req, res) => {
     description: 'Burger de poulet épicé avec sauce piquante',
     price: 6.5,
     image: 'BurgerClassique.png',
-    composition: 'Poulet épicé, fromage, salade, sauce piquante'
+    composition: {
+      type: 'Carn',
+      ingredients: [
+        { name: 'Poulet épicé', spicy: true, quantity: 1 },
+        { name: 'Fromage', spicy: false, quantity: 1 },
+        { name: 'Salade', spicy: false, quantity: 1 },
+        { name: 'Sauce piquante', spicy: true, quantity: 1 }
+      ]
+    }
   },
   {
     id: 5,
@@ -50,7 +86,16 @@ app.get('/burgers', (req, res) => {
     description: 'Double portion de fromage et de viande',
     price: 7.0,
     image: 'BurgerClassique.png',
-    composition: 'Deux steaks, double fromage, salade, tomate, sauce spéciale'
+    composition: {
+      type: 'Carn',
+      ingredients: [
+        { name: 'Steak', spicy: false, quantity: 2 },
+        { name: 'Fromage', spicy: false, quantity: 2 },
+        { name: 'Salade', spicy: false, quantity: 1 },
+        { name: 'Tomate', spicy: false, quantity: 1 },
+        { name: 'Sauce spéciale', spicy: false, quantity: 1 }
+      ]
+    }
   },
   {
     id: 6,
@@ -58,24 +103,49 @@ app.get('/burgers', (req, res) => {
     description: 'Burger avec champignons et fromage suisse',
     price: 6.0,
     image: 'BurgerClassique.png',
-    composition: 'Steak, champignons sautés, fromage suisse, oignons, sauce moutarde'
-  },
-    {
-        id: 7,
-        name: 'BBQ Pulled Pork Burger',
-        description: 'Burger avec porc effiloché et sauce barbecue',
-        price: 7.5,
-        image: 'BurgerClassique.png',
-        composition: 'Porc effiloché, sauce barbecue, coleslaw, oignons'
-    },
-    {
-        id: 8,
-        name: 'Fish Burger',
-        description: 'Burger de poisson avec sauce tartare',
-        price: 6.0,
-        image: 'BurgerClassique.png',
-        composition: 'Filet de poisson pané, salade, tomate, sauce tartare'
+    composition: {
+      type: 'Carn',
+      ingredients: [
+        { name: 'Steak', spicy: false, quantity: 1 },
+        { name: 'Champignons sautés', spicy: false, quantity: 1 },
+        { name: 'Fromage suisse', spicy: false, quantity: 1 },
+        { name: 'Oignons', spicy: false, quantity: 1 },
+        { name: 'Sauce moutarde', spicy: false, quantity: 1 }
+      ]
     }
+  },
+  {
+    id: 7,
+    name: 'BBQ Pulled Pork Burger',
+    description: 'Burger avec porc effiloché et sauce barbecue',
+    price: 7.5,
+    image: 'BurgerClassique.png',
+    composition: {
+      type: 'Carn',
+      ingredients: [
+        { name: 'Porc effiloché', spicy: false, quantity: 1 },
+        { name: 'Sauce barbecue', spicy: false, quantity: 1 },
+        { name: 'Coleslaw', spicy: false, quantity: 1 },
+        { name: 'Oignons', spicy: false, quantity: 1 }
+      ]
+    }
+  },
+  {
+    id: 8,
+    name: 'Fish Burger',
+    description: 'Burger de poisson avec sauce tartare',
+    price: 6.0,
+    image: 'BurgerClassique.png',
+    composition: {
+      type: 'Fish',
+      ingredients: [
+        { name: 'Filet de poisson pané', spicy: false, quantity: 1 },
+        { name: 'Salade', spicy: false, quantity: 1 },
+        { name: 'Tomate', spicy: false, quantity: 1 },
+        { name: 'Sauce tartare', spicy: false, quantity: 1 }
+      ]
+    }
+  }
   ])
 })
 
